@@ -4,11 +4,12 @@ import {useState} from 'react'
 import {useParams} from 'react-router-dom'
 import {DragDropContext, Droppable} from 'react-beautiful-dnd'
 
+import {db, firebase} from '../firebase/fbConfig'
 import {Link} from 'react-router-dom'
 import Column from '../components/Column'
 import Modal from '../components/Modal'
 import AddTask from '../screens/AddTask'
-// import {Add, Github} from '../components/Icons'
+import {Add, Github} from '../components/Icons'
 
 import useKanbanData from '../hooks/useKanbanData'
 import {debounce} from '../utils'

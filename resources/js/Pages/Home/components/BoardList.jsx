@@ -5,7 +5,7 @@ import {useState} from 'react'
 import Modal from './Modal'
 import {Exclaim, Bin} from './Icons'
 
-const BoardList = ({ logOut, boards, addNewBoard, deleteBoard, name }) => 
+export default function BoardList({ logOut, boards, addNewBoard, deleteBoard, name }) 
 {
     const [modal, setModal] = useState(false)
     const [idToBeDeleted, setId] = useState(null)
@@ -20,20 +20,7 @@ const BoardList = ({ logOut, boards, addNewBoard, deleteBoard, name }) =>
         setModal(true)
     }
 
-    if(navigator.onLine !== true)
-    {
-        return (
-                <div className='p-12'>
-                    <div className="my-12">
-                        <h1 className='text-xl text-red-800'>The network is disconnected. Connect and try again</h1>
-                    </div>
-                </div>
-            )
-    }
-
-
-
-    else return (
+    return (
         <div className='bg-gradient-to-br from-white via-indigo-100 to-primary h-screen px-6 py-4 sm:py-20 sm:px-24'>
             <Modal modal={modal} setModal={setModal} ariaText='Board Delete confirmation'>
                 <div className='md:px-12 '>
@@ -81,4 +68,3 @@ const BoardList = ({ logOut, boards, addNewBoard, deleteBoard, name }) =>
     )
 }
 
-export default BoardList

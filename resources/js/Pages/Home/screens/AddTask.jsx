@@ -1,5 +1,6 @@
 
 import {useState} from 'react'
+import {db, firebase} from '../firebase/fbConfig'
 import {v4 as uuidv4} from 'uuid';
 
 const AddTask = ({boardId, userId, close, allCols}) => 

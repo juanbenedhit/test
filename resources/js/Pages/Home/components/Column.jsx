@@ -3,6 +3,7 @@ import Task from './Task'
 
 import {Bin, Exclaim} from './Icons'
 
+import {db, firebase} from '../firebase/fbConfig'
 import {debounce} from '../utils'
 import {useState, useRef} from 'react'
 import Modal from './Modal'

@@ -1,9 +1,8 @@
 import {useState} from 'react'
 import Checklist from '../components/Checklist'
-import {db, firebase} from '../firebase/fbConfig'
 import {extractPriority} from '../utils'
 import ReactMarkdown from 'react-markdown'
-// import gfm from 'remark-gfm'
+import gfm from 'remark-gfm'
 
 import Modal from '../components/Modal'
 import {Exclaim} from '../components/Icons'

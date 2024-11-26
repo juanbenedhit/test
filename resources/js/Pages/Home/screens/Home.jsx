@@ -1,4 +1,5 @@
 
+import {db} from '../firebase/fbConfig'
 import {BrowserRouter, Route} from 'react-router-dom'
 import useBoards from '../hooks/useBoards'
 
